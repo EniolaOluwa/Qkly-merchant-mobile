@@ -1,0 +1,14 @@
+declare module 'App-Data-Types' {
+  import {ImageRequireSource} from 'react-native';
+  export interface ISplashData {
+    image: ImageRequireSource;
+    title: string;
+    body: string;
+  }
+  export interface TabArrType {
+    route: string;
+    component: () => React.JSX.Element;
+    inactiveIcon: () => React.JSX.Element;
+    activeIcon: () => React.JSX.Element;
+  }
+}
