@@ -11,6 +11,10 @@ declare module 'navigation-route-type' {
     VerifyPasswordEmail: undefined;
     CreatePassword: undefined;
     CreateBusinessDetails: undefined;
+    BvnScreen: undefined;
+    BvnSuccessScreen: undefined;
+    AuthenticationPin: undefined;
+    CreatePinSuccessScreen: undefined;
   };
 
   export type TabStackParamList = {

@@ -12,7 +12,6 @@ const VerifyPasswordEmail = () => {
     <Container.Padding>
       <Header title="Verify Code" desc="An OTP was sent to your email" />
 
-      <Spacer height={24} />
       <Inputs.OTP
         cellCount={6}
         label="Enter code"

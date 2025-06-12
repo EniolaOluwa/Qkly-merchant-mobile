@@ -9,7 +9,6 @@ import Buttons from '@components/Button';
 import DualText from '@modules/Onboarding/components/DualText';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {UnauthenticatedStackParamList} from 'navigation-route-type';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 type LoginScreenProps = NativeStackScreenProps<
   UnauthenticatedStackParamList,
@@ -18,12 +17,10 @@ type LoginScreenProps = NativeStackScreenProps<
 const LoginScreen: React.FC<LoginScreenProps> = ({navigation}) => {
   const navigateToCreateAccount = () => navigation.navigate('CreateAccount');
   const navigateToForgotPassword = () => navigation.navigate('ForgotPassword');
-  const {bottom} = useSafeAreaInsets();
 
   return (
     <Container.Padding>
       <Header title="Log In" desc="Welcome back!" />
-      <Spacer height={30} />
       <Inputs.Text
         label="Email Address"
         placeholder="Enter your email address"
@@ -44,7 +41,6 @@ const LoginScreen: React.FC<LoginScreenProps> = ({navigation}) => {
         actionText="Create account"
         action={navigateToCreateAccount}
       />
-      <Spacer height={bottom} />
     </Container.Padding>
   );
 };

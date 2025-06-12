@@ -3,7 +3,7 @@ import React from 'react';
 import colors from '@utils/colors';
 import {moderateScale} from '@utils/responsive';
 
-type TextType = 'Bold' | 'SemiBold' | 'Regular';
+type TextType = 'Bold' | 'SemiBold' | 'Regular' | 'Light';
 interface Props extends TextProps {
   size?: number;
   color?: string;
@@ -74,17 +74,17 @@ const TextComponent: Record<TextType, React.FC<Props>> = {
       {...textProps}
     />
   ),
-  // Light: ({size, color, center, children, style, ...textProps}) => (
-  //   <MainText
-  //     size={size}
-  //     style={style}
-  //     textStyle={styles.light}
-  //     children={children}
-  //     center={center}
-  //     color={color}
-  //     {...textProps}
-  //   />
-  // ),
+  Light: ({size, color, center, children, style, ...textProps}) => (
+    <MainText
+      size={size}
+      style={style}
+      textStyle={styles.light}
+      children={children}
+      center={center}
+      color={color}
+      {...textProps}
+    />
+  ),
 };
 
 export default TextComponent;
@@ -98,5 +98,8 @@ const styles = StyleSheet.create({
   },
   regular: {
     fontFamily: 'OpenSans-Regular',
+  },
+  light: {
+    fontFamily: 'OpenSans-Light',
   },
 });

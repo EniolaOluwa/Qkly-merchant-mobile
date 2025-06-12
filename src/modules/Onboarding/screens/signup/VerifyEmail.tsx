@@ -14,7 +14,6 @@ const VerifyEmail = () => {
   return (
     <Container.Padding>
       <Header title="Verify your Email" desc="An OTP was sent to your email" />
-      <Spacer height={23} />
       <OnboardingCounts count={2} />
       <Spacer height={40} />
       <Inputs.OTP

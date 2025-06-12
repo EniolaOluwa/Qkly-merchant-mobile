@@ -85,7 +85,8 @@ const QklyKeyboard = memo(
                   ) : (
                     <TextComponent.Bold
                       color={colors.neutral[250]}
-                      style={styles.number}>
+                      style={styles.number}
+                      size={16}>
                       {item}
                     </TextComponent.Bold>
                   )}

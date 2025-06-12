@@ -48,10 +48,11 @@ const Header = ({
       ) : desc ? (
         <TextComponent.Regular
           color={colors.textPrimary}
-          style={{lineHeight: 22, width: '95%', fontWeight: '400'}}>
+          style={{width: '95%'}}>
           {desc}
         </TextComponent.Regular>
       ) : null}
+      <Spacer height={24} />
     </View>
   );
 };

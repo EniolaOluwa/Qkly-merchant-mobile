@@ -39,6 +39,10 @@
 	<array>
 		<string>arm64</string>
 	</array>
+	<key>NSCameraUsageDescription</key> 
+	<string>Qkly Merchant wants to access your camera to take a picture to be used as your business photo</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Qkly Merchant wants to access your photo library to upload an image to be used as your business photo</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

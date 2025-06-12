@@ -6,7 +6,9 @@ import {moderateScale} from '@utils/responsive';
 const InsetSpacer = ({type = 'top'}: {type?: 'top' | 'bottom'}) => {
   const {top, bottom} = useSafeAreaInsets();
   return (
-    <View style={{height: type === 'top' ? top + moderateScale(15) : bottom}} />
+    <View
+      style={{height: type === 'top' ? top + moderateScale(15) : bottom + 10}}
+    />
   );
 };
 

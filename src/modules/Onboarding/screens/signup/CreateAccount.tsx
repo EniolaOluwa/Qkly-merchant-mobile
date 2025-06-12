@@ -31,7 +31,6 @@ const CreateAccount = () => {
           title="Create an Account"
           desc="Join the Market place and start selling"
         />
-        <Spacer height={24} />
         <OnboardingCounts count={1} />
         <Spacer height={24} />
         <Inputs.Text
@@ -85,7 +84,7 @@ const CreateAccount = () => {
           error={error.confirm}
           errorText="Passwords do not match"
         />
-        <Spacer height={30} />
+        <Spacer flex={1} height={30} />
         <Buttons.Primary onPress={pressBtn}>Continue</Buttons.Primary>
         <Spacer height={bottom + 10} />
       </ScrollView>

@@ -14,15 +14,14 @@ const CreatePassword = () => {
     useChangeForgotPassword();
   const {bottom} = useSafeAreaInsets();
   return (
-    <Container.Padding>
+    <Container.Keyboard>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{flex: 1, paddingBottom: bottom}}>
+        contentContainerStyle={{flex: 1, paddingBottom: bottom + 10}}>
         <Header
           title="Create Password"
           desc="You can now create a new password"
         />
-        <Spacer height={24} />
         <Inputs.Password
           value={password}
           onChange={setPassword}
@@ -40,7 +39,7 @@ const CreatePassword = () => {
         <Spacer flex={1} />
         <Buttons.Primary onPress={goToLogin}>Continue</Buttons.Primary>
       </ScrollView>
-    </Container.Padding>
+    </Container.Keyboard>
   );
 };
 

@@ -26,6 +26,7 @@ const Container: Record<ContainerType, React.FC<Props>> = {
         style={[appStyle.container, {backgroundColor: colors.white}, style]}>
         <InsetSpacer />
         {children}
+        <InsetSpacer type="bottom" />
       </View>
     );
   },

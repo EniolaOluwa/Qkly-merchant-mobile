@@ -37,12 +37,7 @@ const PrimaryButton: React.FC<Props> = ({
 }) => {
   return (
     <TouchableOpacity
-      style={[
-        styles.btn,
-        styles.wideBtn,
-        disable && {opacity: 0.6, backgroundColor: colors.neutral[100]},
-        style,
-      ]}
+      style={[styles.btn, styles.wideBtn, disable && {opacity: 0.3}, style]}
       disabled={disable}
       activeOpacity={0.7}
       {...props}>
