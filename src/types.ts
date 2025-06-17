@@ -11,4 +11,9 @@ declare module 'App-Data-Types' {
     inactiveIcon: () => React.JSX.Element;
     activeIcon: () => React.JSX.Element;
   }
+  export interface TopDataType {
+    title: string;
+    balance: string;
+    icon: (color: string) => React.JSX.Element;
+  }
 }

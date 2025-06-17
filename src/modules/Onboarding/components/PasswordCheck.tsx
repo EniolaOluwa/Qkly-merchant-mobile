@@ -20,13 +20,13 @@ const PasswordCheck = ({password}) => {
         condition: password.match(/[a-z]/) ? true : false,
       },
       {
-        label: 'Numbers',
+        label: 'Special Characters',
         condition: password.match(/[`!@#$%£^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/)
           ? true
           : false,
       },
       {
-        label: 'Special Characters',
+        label: 'Numbers',
         condition: password.match(/[1-9]/) ? true : false,
       },
     ];

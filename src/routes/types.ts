@@ -30,4 +30,6 @@ declare module 'navigation-route-type' {
   export type AuthenticatedStackParamList = {
     TabNavigator: undefined;
   };
+  export type AuthenticatedNavigationProps =
+    NavigationProp<AuthenticatedStackParamList>;
 }

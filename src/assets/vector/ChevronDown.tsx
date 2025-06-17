@@ -1,12 +1,16 @@
 import React from 'react';
 import Svg, {Path} from 'react-native-svg';
+import {iconProps} from './type';
 
-const ChevronDown = () => {
+const ChevronDown = ({color = '#D2D9DF', size = '12'}: iconProps) => {
   return (
-    <Svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+    <Svg width={size} height={size} viewBox="0 0 16 8" fill="none">
       <Path
-        d="M6.6665 6.91663L11.3332 2.16663C11.6665 1.83329 11.6665 1.33329 11.3332 0.999958C10.9998 0.666625 10.4998 0.666625 10.1665 0.999958L5.99984 5.08329L1.83317 0.999958C1.49984 0.666625 0.999837 0.666625 0.666503 0.999959C0.499837 1.16663 0.416504 1.33329 0.416504 1.58329C0.416504 1.83329 0.499837 1.99996 0.666503 2.16663L5.33317 6.91663C5.74984 7.24996 6.24984 7.24996 6.6665 6.91663C6.58317 6.91663 6.58317 6.91663 6.6665 6.91663Z"
-        fill="#D2D9DF"
+        d="M15 1L8 7L1 1"
+        stroke={color}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </Svg>
   );

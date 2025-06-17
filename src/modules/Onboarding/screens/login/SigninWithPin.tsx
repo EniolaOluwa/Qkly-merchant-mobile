@@ -14,6 +14,7 @@ import {useNavigation} from '@react-navigation/native';
 import {UnAuthenticatedNavigationProps} from 'navigation-route-type';
 import {useDispatch} from 'react-redux';
 import {allowLogin} from '@store/userSlice/userSlice';
+import Container from '@components/Container';
 
 const SignInWithPin = () => {
   //@ts-ignore
@@ -38,7 +39,7 @@ const SignInWithPin = () => {
     }
   }, [pin]);
   return (
-    <View style={appStyle.container}>
+    <Container.Normal>
       <Spacer height={top + 20} />
 
       <TextComponent.Bold size={24}>Log in to your Account</TextComponent.Bold>
@@ -69,7 +70,7 @@ const SignInWithPin = () => {
         <Spacer height={30} />
       </ScrollView>
       <Spacer height={bottom} />
-    </View>
+    </Container.Normal>
   );
 };
 

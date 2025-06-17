@@ -5,7 +5,6 @@ export const appStyle = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: horizontalSpacer,
-    backgroundColor: 'white',
   },
   flex1: {
     flex: 1,
@@ -35,7 +34,7 @@ export const appStyle = StyleSheet.create({
   shadow: {
     shadowColor: '#555',
     shadowOffset: {width: 0.1, height: 0.1},
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.3,
     shadowRadius: 1,
     elevation: 1,
   },

@@ -1,10 +1,16 @@
-import {KeyboardAvoidingView, Platform, View, ViewStyle} from 'react-native';
+import {
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  View,
+  ViewStyle,
+} from 'react-native';
 import React from 'react';
 import {appStyle} from '@utils/styles';
 import colors from '@utils/colors';
 import InsetSpacer from '@components/Spacer/InsetSpacer';
 
-type ContainerType = 'Normal' | 'Keyboard' | 'Padding';
+type ContainerType = 'Normal' | 'Keyboard' | 'Padding' | 'Scroll';
 interface Props {
   children: React.ReactElement | React.ReactNode;
   style?: ViewStyle;
@@ -15,7 +21,8 @@ interface KeyboardProps extends Props {
 const Container: Record<ContainerType, React.FC<Props>> = {
   Normal: ({children, style}) => {
     return (
-      <View style={[appStyle.flex1, {backgroundColor: colors.white}, style]}>
+      <View
+        style={[appStyle.container, {backgroundColor: colors.white}, style]}>
         {children}
       </View>
     );
@@ -38,6 +45,16 @@ const Container: Record<ContainerType, React.FC<Props>> = {
         <InsetSpacer />
         {children}
       </KeyboardAvoidingView>
+    );
+  },
+  Scroll: ({children, style}) => {
+    return (
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={[appStyle.flex1, {backgroundColor: colors.white}, style]}>
+        {children}
+        <InsetSpacer type="bottom" />
+      </ScrollView>
     );
   },
 };

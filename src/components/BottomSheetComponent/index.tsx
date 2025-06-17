@@ -4,7 +4,7 @@ import {BottomSheetModal, BottomSheetBackdrop} from '@gorhom/bottom-sheet';
 import {BottomSheetModalMethods} from '@gorhom/bottom-sheet/lib/typescript/types';
 import {BackdropPressBehavior} from '@gorhom/bottom-sheet/lib/typescript/components/bottomSheetBackdrop/types';
 import colors from '@utils/colors';
-import {horizontalScale} from '@utils/responsive';
+import {horizontalScale, horizontalSpacer} from '@utils/responsive';
 
 type Props = {
   snapPoint: string;
@@ -63,6 +63,6 @@ const style = StyleSheet.create({
   main: {
     borderTopRightRadius: 32,
     borderTopLeftRadius: 32,
-    paddingHorizontal: horizontalScale(22),
+    paddingHorizontal: horizontalSpacer,
   },
 });
