@@ -25,6 +25,7 @@ declare module 'input-props' {
     inputProps?: TextInputProps;
     onChange?: (val: string) => void;
     bottom?: number;
+    success?: boolean;
   }
   export interface QklyPasswordInputProps extends InputProps {
     value?: string;

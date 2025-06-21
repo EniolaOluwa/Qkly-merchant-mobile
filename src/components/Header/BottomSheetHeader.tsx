@@ -21,9 +21,11 @@ const BottomSheetHeader: React.FC<Props> = ({title, desc, onClose}) => {
           {title}
         </TextComponent.Bold>
         <Spacer height={3} />
-        <TextComponent.Regular color={colors.textPrimary}>
-          {desc}
-        </TextComponent.Regular>
+        {desc && (
+          <TextComponent.Regular color={colors.textPrimary}>
+            {desc}
+          </TextComponent.Regular>
+        )}
       </View>
       <Pressable style={styles.icon} onPress={onClose}>
         <CancelIcon />

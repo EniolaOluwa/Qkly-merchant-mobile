@@ -5,10 +5,15 @@ import colors from '@utils/colors';
 import TextComponent from '@components/Text/textComponent';
 import Spacer from '@components/Spacer';
 import OrderBoxIcon from '@assets/vector/OrderBoxIcon';
+import {useNavigation} from '@react-navigation/native';
+import {AuthenticatedNavigationProps} from 'navigation-route-type';
 
 const OrderItem = () => {
+  const {navigate} = useNavigation<AuthenticatedNavigationProps>();
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigate('OrderDetails')}>
       <View style={styles.icon}>
         <OrderBoxIcon />
       </View>

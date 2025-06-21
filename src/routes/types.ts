@@ -29,6 +29,9 @@ declare module 'navigation-route-type' {
 
   export type AuthenticatedStackParamList = {
     TabNavigator: undefined;
+    OrderDetails: undefined;
+    AddMoney: undefined;
+    SendMoney: undefined;
   };
   export type AuthenticatedNavigationProps =
     NavigationProp<AuthenticatedStackParamList>;

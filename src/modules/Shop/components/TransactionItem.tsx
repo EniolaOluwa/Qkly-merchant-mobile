@@ -17,7 +17,7 @@ const TransactionItem = () => {
           Payment from Success
         </TextComponent.SemiBold>
         <Spacer height={5} />
-        <TextComponent.Regular size={10}>
+        <TextComponent.Regular size={10} color={colors.neutral[350]}>
           18th March. 10:53 Am
         </TextComponent.Regular>
       </View>

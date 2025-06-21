@@ -40,7 +40,7 @@ const Header = ({
           <TextComponent.Bold size={24} color={colors.textPrimary}>
             {title}
           </TextComponent.Bold>
-          <Spacer height={10} />
+          <Spacer height={5} />
         </>
       )}
       {descElement ? (

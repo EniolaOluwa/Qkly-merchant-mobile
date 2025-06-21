@@ -18,6 +18,9 @@ interface Props {
 interface KeyboardProps extends Props {
   behavior: 'height' | 'padding';
 }
+interface ScrollProps extends Props {
+  contentContainerStyle: ViewStyle;
+}
 const Container: Record<ContainerType, React.FC<Props>> = {
   Normal: ({children, style}) => {
     return (
@@ -47,11 +50,12 @@ const Container: Record<ContainerType, React.FC<Props>> = {
       </KeyboardAvoidingView>
     );
   },
-  Scroll: ({children, style}) => {
+  Scroll: ({children, style, contentContainerStyle}: ScrollProps) => {
     return (
       <ScrollView
         showsVerticalScrollIndicator={false}
-        style={[appStyle.flex1, {backgroundColor: colors.white}, style]}>
+        style={[appStyle.flex1, {backgroundColor: colors.white}, style]}
+        contentContainerStyle={contentContainerStyle}>
         {children}
         <InsetSpacer type="bottom" />
       </ScrollView>

@@ -1,7 +1,14 @@
-import {Pressable, StyleSheet, TextInput, View} from 'react-native';
+import {
+  Pressable,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React, {useState} from 'react';
 import {moderateScale, widthRes} from 'utils/responsive';
 import {
+  QklyDropdownProps,
   // QklyCheckBoxProps,
   // QklyDropdownProps,
   QklyOTPProps,
@@ -20,6 +27,7 @@ import {
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
 import {appStyle} from '@utils/styles';
+import ChevronDown from '@assets/vector/ChevronDown';
 
 //Default input props
 
@@ -39,6 +47,7 @@ const Text: React.FC<QklyTextInputProps> = ({
   bottom = 15,
   keyboard = 'default',
   inputProps,
+  success,
 }) => {
   const [focus, setFocus] = useState(false);
 
@@ -56,6 +65,7 @@ const Text: React.FC<QklyTextInputProps> = ({
 
           {marginBottom: error ? 5 : bottom},
           error && styles.errorBorder,
+          success && {borderColor: colors.neutral[150]},
           style,
         ]}>
         {leftIcon && (
@@ -84,7 +94,7 @@ const Text: React.FC<QklyTextInputProps> = ({
       {error && (
         <View style={styles.errorText}>
           <TextComponent.SemiBold
-            color={colors.error[150]}
+            color={success ? colors.primary[700] : colors.error[150]}
             size={12}
             style={{flex: 1}}>
             {errorText}
@@ -251,10 +261,74 @@ const OTP: React.FC<QklyOTPProps> = ({
     </View>
   );
 };
+
+const DropDown: React.FC<QklyDropdownProps> = ({
+  placeholder,
+  style,
+  error,
+  value,
+  containerStyle,
+  leftIcon,
+  errorText,
+  label,
+  inputStyle,
+  onPress,
+  sheet,
+  disable,
+  showChevron = true,
+}) => {
+  return (
+    <View style={[{width: '100%'}, containerStyle]}>
+      {label && (
+        <TextComponent.Regular color={colors.neutral[400]}>
+          {label}
+        </TextComponent.Regular>
+      )}
+      <TouchableOpacity
+        activeOpacity={0.7}
+        style={[
+          styles.textInputContainer,
+
+          {marginBottom: error ? 5 : 20},
+          error && styles.errorBorder,
+          style,
+        ]}
+        onPress={onPress}
+        disabled={disable}>
+        {leftIcon && (
+          <>
+            {leftIcon}
+            <Spacer width={10} />
+          </>
+        )}
+        <View style={[styles.dropdownInner, inputStyle]}>
+          <TextComponent.Regular
+            color={value ? colors.neutral[400] : colors.neutral[200]}>
+            {value || placeholder}
+          </TextComponent.Regular>
+        </View>
+        {!showChevron ? <View /> : <ChevronDown />}
+      </TouchableOpacity>
+
+      {error && (
+        <View style={styles.errorText}>
+          <TextComponent.SemiBold
+            color={colors.error[150]}
+            size={12}
+            style={{flex: 1}}>
+            {errorText}
+          </TextComponent.SemiBold>
+        </View>
+      )}
+      {sheet ? sheet : null}
+    </View>
+  );
+};
 const Inputs = {
   Text,
   Password,
   OTP,
+  DropDown,
 };
 
 export default Inputs;
@@ -309,5 +383,10 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderWidth: 1,
     borderColor: colors.neutral[150],
+  },
+  dropdownInner: {
+    flex: 1,
+    height: '100%',
+    justifyContent: 'center',
   },
 });
