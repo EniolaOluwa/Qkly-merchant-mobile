@@ -1,8 +1,7 @@
-import {ScrollView, View} from 'react-native';
+import {ScrollView} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import QklyKeyboard from '@components/QklyKeyboard';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {appStyle} from '@utils/styles';
 import Spacer from '@components/Spacer';
 import TextComponent from '@components/Text/textComponent';
 import colors from '@utils/colors';
@@ -15,11 +14,12 @@ import {UnAuthenticatedNavigationProps} from 'navigation-route-type';
 import {useDispatch} from 'react-redux';
 import {allowLogin} from '@store/userSlice/userSlice';
 import Container from '@components/Container';
+import InsetSpacer from '@components/Spacer/InsetSpacer';
 
 const SignInWithPin = () => {
   //@ts-ignore
   const {navigate, replace} = useNavigation<UnAuthenticatedNavigationProps>();
-  const {top, bottom} = useSafeAreaInsets();
+  const {top} = useSafeAreaInsets();
   const [pin, setPin] = useState('');
   const dispatch = useDispatch();
 
@@ -69,7 +69,7 @@ const SignInWithPin = () => {
         />
         <Spacer height={30} />
       </ScrollView>
-      <Spacer height={bottom} />
+      <InsetSpacer type="bottom" />
     </Container.Normal>
   );
 };

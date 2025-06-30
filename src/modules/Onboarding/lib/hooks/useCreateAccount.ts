@@ -43,14 +43,14 @@ const useCreateAccount = () => {
   );
 
   const pressBtn = () => {
-    // const {firstName, lastName, password, confirm, email, phoneNumber} =
-    //   details;
-    // if (!checkName.test(firstName)) return handleError('firstName');
-    // if (!checkName.test(lastName)) return handleError('lastName');
-    // if (!emailRegex.test(email)) return handleError('email');
-    // if (phoneNumber.length < 11) return handleError('phoneNumber');
-    // if (!checkPassword.test(password)) return handleError('password');
-    // if (confirm !== password) return handleError('confirm');
+    const {firstName, lastName, password, confirm, email, phoneNumber} =
+      details;
+    if (!checkName.test(firstName)) return handleError('firstName');
+    if (!checkName.test(lastName)) return handleError('lastName');
+    if (!emailRegex.test(email)) return handleError('email');
+    if (phoneNumber.length < 11) return handleError('phoneNumber');
+    if (!checkPassword.test(password)) return handleError('password');
+    if (confirm !== password) return handleError('confirm');
 
     navigate('VerifyEmail');
   };

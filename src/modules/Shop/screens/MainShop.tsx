@@ -10,7 +10,7 @@ import Spacer from '@components/Spacer';
 const TABS = ['Products', 'Orders', 'Wallets'];
 
 const MainShop = () => {
-  const [selectedTab, setSelectedTab] = useState('Products');
+  const [selectedTab, setSelectedTab] = useState(TABS[0]);
   return (
     <Container.Normal>
       <AppTabHeader title="Shop" desc="Manage your Business in one place" />

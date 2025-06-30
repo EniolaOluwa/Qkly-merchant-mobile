@@ -8,18 +8,13 @@ import TransactionItem from '@modules/Shop/components/TransactionItem';
 const WalletOverview = () => {
   return (
     <View style={appStyle.flex1}>
-      <View style={appStyle.flexRowSpaceCenter}>
-        <TextComponent.SemiBold size={16}>
-          Wallet Transaction
+      <Pressable style={{alignSelf: 'flex-end'}}>
+        <TextComponent.SemiBold
+          style={{textDecorationLine: 'underline'}}
+          color={colors.primary[800]}>
+          See all
         </TextComponent.SemiBold>
-        <Pressable>
-          <TextComponent.SemiBold
-            style={{textDecorationLine: 'underline'}}
-            color={colors.primary[800]}>
-            See all
-          </TextComponent.SemiBold>
-        </Pressable>
-      </View>
+      </Pressable>
 
       {[...Array(5)].map((_, i) => (
         <TransactionItem key={i} />

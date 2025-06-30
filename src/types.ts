@@ -1,4 +1,5 @@
 declare module 'App-Data-Types' {
+  import {AuthenticatedStackParamList} from 'navigation-route-type';
   import {ImageRequireSource} from 'react-native';
   export interface ISplashData {
     image: ImageRequireSource;
@@ -15,5 +16,11 @@ declare module 'App-Data-Types' {
     title: string;
     balance: string;
     icon: (color: string) => React.JSX.Element;
+  }
+  export interface IGrowthDataType {
+    title: string;
+    desc: string;
+    icon: () => React.JSX.Element;
+    navigation: keyof AuthenticatedStackParamList;
   }
 }

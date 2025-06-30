@@ -1,4 +1,4 @@
-import {Image, Pressable, StyleSheet, View} from 'react-native';
+import {Pressable, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {ProfileImage} from '@assets/images';
 import {horizontalScale, moderateScale} from '@utils/responsive';
@@ -9,6 +9,7 @@ import NotificationIcon from '@assets/vector/NotificationIcon';
 import {useNavigation} from '@react-navigation/native';
 import {AuthenticatedNavigationProps} from 'navigation-route-type';
 import InsetSpacer from '@components/Spacer/InsetSpacer';
+import FastImage from '@d11/react-native-fast-image';
 
 const HomeHeader = () => {
   const {navigate} = useNavigation<AuthenticatedNavigationProps>();
@@ -16,7 +17,7 @@ const HomeHeader = () => {
     <>
       <InsetSpacer />
       <View style={styles.container}>
-        <Image source={ProfileImage} style={styles.image} />
+        <FastImage source={ProfileImage} style={styles.image} />
         <View style={{width: '65%'}}>
           <TextComponent.SemiBold size={18} numberOfLines={1}>
             Hello Businessname

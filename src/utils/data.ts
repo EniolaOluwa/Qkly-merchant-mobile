@@ -1,7 +1,10 @@
 import {Splash1, Splash2} from '@assets/images';
+import DiscountIcon from '@assets/vector/DiscountIcon';
 import GrowthIcon from '@assets/vector/GrowthIcon';
 import HomeBoldIcon from '@assets/vector/HomeBoldIcon';
 import HomeOutlineIcon from '@assets/vector/HomeOutlineIcon';
+import MessageCircleIcon from '@assets/vector/MessageCircleIcon';
+import MessageSquareIcon from '@assets/vector/MessageSquareIcon';
 import OrderCarticon from '@assets/vector/OrderCarticon';
 import ProfileBoldIcon from '@assets/vector/ProfileBoldIcon';
 import ProfileOutlineIcon from '@assets/vector/ProfileOutlineIcon';
@@ -13,7 +16,12 @@ import MainGrowth from '@modules/Growth/screens/MainGrowth';
 import MainHome from '@modules/Home/screens/MainHome';
 import MainProfile from '@modules/Profile/screens/MainProfile';
 import MainShop from '@modules/Shop/screens/MainShop';
-import {ISplashData, TabArrType, TopDataType} from 'App-Data-Types';
+import {
+  IGrowthDataType,
+  ISplashData,
+  TabArrType,
+  TopDataType,
+} from 'App-Data-Types';
 
 export const splashData: ISplashData[] = [
   {
@@ -39,7 +47,7 @@ export const TabArr: TabArrType[] = [
     route: 'Shop',
     activeIcon: ShopBoldIcon,
     component: MainShop,
-    inactiveIcon: ShopOutlineIcon,
+    inactiveIcon: () => ShopOutlineIcon({}),
   },
   {
     route: 'Growth',
@@ -51,7 +59,7 @@ export const TabArr: TabArrType[] = [
     route: 'Profile',
     activeIcon: ProfileBoldIcon,
     component: MainProfile,
-    inactiveIcon: ProfileOutlineIcon,
+    inactiveIcon: () => ProfileOutlineIcon({}),
   },
 ];
 
@@ -70,5 +78,32 @@ export const TopTabData: TopDataType[] = [
     title: 'Reviews',
     icon: (color: string) => ReviewIcon({color}),
     balance: '356',
+  },
+];
+
+export const GrowthData: IGrowthDataType[] = [
+  {
+    desc: 'Create visuals for your store',
+    title: 'Social Media',
+    icon: MessageCircleIcon,
+    navigation: 'MainSocialMedia',
+  },
+  {
+    desc: 'Send updates and reminders',
+    title: 'Messages',
+    icon: MessageSquareIcon,
+    navigation: 'Messages',
+  },
+  {
+    desc: 'Apply Discount to your Products',
+    title: 'Discount',
+    icon: DiscountIcon,
+    navigation: 'DiscountScreen',
+  },
+  {
+    desc: 'Apply Discount to your Products',
+    title: 'Lead Form',
+    icon: DiscountIcon,
+    navigation: 'LeadForm',
   },
 ];

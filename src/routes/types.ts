@@ -32,6 +32,16 @@ declare module 'navigation-route-type' {
     OrderDetails: undefined;
     AddMoney: undefined;
     SendMoney: undefined;
+    MainSocialMedia: undefined;
+    DiscountScreen: undefined;
+    LeadForm: undefined;
+    Messages: undefined;
+    ImageCreator: undefined;
+    CreateDiscount: undefined;
+    ChangePassword: undefined;
+    ChangePin: undefined;
+    NewPin: {oldPin: string};
+    ConfirmNewPin: {oldPin: string; newPin: string};
   };
   export type AuthenticatedNavigationProps =
     NavigationProp<AuthenticatedStackParamList>;

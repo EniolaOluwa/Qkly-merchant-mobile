@@ -5,6 +5,16 @@ import TabNavigator from './TabNavigator';
 import OrderDetails from '@modules/Shop/screens/orders/OrderDetails';
 import AddMoney from '@modules/Shop/screens/wallets/AddMoney';
 import SendMoney from '@modules/Shop/screens/wallets/SendMoney';
+import MainSocialMedia from '@modules/Growth/screens/socialMedia/MainSocialMedia';
+import DiscountScreen from '@modules/Growth/screens/discounts/DiscountScreen';
+import LeadForm from '@modules/Growth/screens/leadForm/LeadForm';
+import Messages from '@modules/Growth/screens/messages/Messages';
+import ImageCreator from '@modules/Growth/screens/socialMedia/ImageCreator';
+import CreateDiscount from '@modules/Growth/screens/discounts/CreateDiscount';
+import ChangePassword from '@modules/Profile/screens/ChangePassword';
+import ChangePin from '@modules/Profile/screens/ChangePin';
+import NewPin from '@modules/Profile/screens/NewPin';
+import ConfirmNewPin from '@modules/Profile/screens/ConfirmNewPin';
 const {Screen, Navigator} = createNativeStackNavigator<
   AuthenticatedStackParamList,
   'Authenticated_Stack'
@@ -16,6 +26,16 @@ const Authenticated = () => {
       <Screen name="OrderDetails" component={OrderDetails} />
       <Screen name="AddMoney" component={AddMoney} />
       <Screen name="SendMoney" component={SendMoney} />
+      <Screen name="MainSocialMedia" component={MainSocialMedia} />
+      <Screen name="DiscountScreen" component={DiscountScreen} />
+      <Screen name="LeadForm" component={LeadForm} />
+      <Screen name="Messages" component={Messages} />
+      <Screen name="ImageCreator" component={ImageCreator} />
+      <Screen name="CreateDiscount" component={CreateDiscount} />
+      <Screen name="ChangePassword" component={ChangePassword} />
+      <Screen name="ChangePin" component={ChangePin} />
+      <Screen name="NewPin" component={NewPin} />
+      <Screen name="ConfirmNewPin" component={ConfirmNewPin} />
     </Navigator>
   );
 };

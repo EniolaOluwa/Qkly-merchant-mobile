@@ -69,7 +69,9 @@ const OutlineButton: React.FC<OutlineProps> = ({
       {leftIcon && (
         <View style={{marginRight: horizontalScale(10)}}>{leftIcon}</View>
       )}
-      <TextComponent.Regular color={textColor || colors.black} size={textSize}>
+      <TextComponent.Regular
+        color={textColor || colors.neutral[200]}
+        size={textSize}>
         {children}
       </TextComponent.Regular>
       {rightIcon && (
@@ -95,7 +97,7 @@ const styles = StyleSheet.create({
   outlineBtn: {
     backgroundColor: colors.white,
     borderWidth: 1,
-    borderColor: colors.primary[600],
+    borderColor: '#00756F55',
   },
   spacer: {
     marginLeft: moderateScale(10),

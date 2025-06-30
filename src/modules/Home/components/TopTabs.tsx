@@ -36,7 +36,7 @@ const TopTabs = ({activeTab, setActiveTab}) => {
     setActiveTab(value.title);
   }, []);
   return (
-    <View style={appStyle.flexRowSpaceCenter}>
+    <View style={[appStyle.flexRowSpaceCenter, {paddingHorizontal: 1}]}>
       {TopTabData.map(t => (
         <RenderItem
           item={t}

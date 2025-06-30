@@ -41,7 +41,7 @@ export default function AnimatedTopTabs({
     ],
     backgroundColor: interpolateColor(
       animatedIndex.value,
-      [0, 1, 2],
+      TABS.map((_, index) => index),
       ['#00756F', '#00756F', '#00756F'],
     ),
   }));
