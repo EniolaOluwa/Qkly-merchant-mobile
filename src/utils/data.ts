@@ -1,8 +1,10 @@
 import {Splash1, Splash2} from '@assets/images';
 import DiscountIcon from '@assets/vector/DiscountIcon';
 import GrowthIcon from '@assets/vector/GrowthIcon';
+import HandWallet from '@assets/vector/HandWallet';
 import HomeBoldIcon from '@assets/vector/HomeBoldIcon';
 import HomeOutlineIcon from '@assets/vector/HomeOutlineIcon';
+import LineArrow from '@assets/vector/LineArrow';
 import MessageCircleIcon from '@assets/vector/MessageCircleIcon';
 import MessageSquareIcon from '@assets/vector/MessageSquareIcon';
 import OrderCarticon from '@assets/vector/OrderCarticon';
@@ -11,6 +13,7 @@ import ProfileOutlineIcon from '@assets/vector/ProfileOutlineIcon';
 import ReviewIcon from '@assets/vector/ReviewIcon';
 import ShopBoldIcon from '@assets/vector/ShopBoldIcon';
 import ShopOutlineIcon from '@assets/vector/ShopOutlineIcon';
+import TagIcon from '@assets/vector/TagIcon';
 import WalletIcon from '@assets/vector/WalletIcon';
 import MainGrowth from '@modules/Growth/screens/MainGrowth';
 import MainHome from '@modules/Home/screens/MainHome';
@@ -18,6 +21,7 @@ import MainProfile from '@modules/Profile/screens/MainProfile';
 import MainShop from '@modules/Shop/screens/MainShop';
 import {
   IGrowthDataType,
+  IInsightDataType,
   ISplashData,
   TabArrType,
   TopDataType,
@@ -105,5 +109,22 @@ export const GrowthData: IGrowthDataType[] = [
     title: 'Lead Form',
     icon: DiscountIcon,
     navigation: 'LeadForm',
+  },
+];
+export const InsightData: IInsightDataType[] = [
+  {
+    desc: '1000',
+    title: 'Total Visit to store',
+    icon: LineArrow,
+  },
+  {
+    desc: '46',
+    title: 'Number of Items sold',
+    icon: TagIcon,
+  },
+  {
+    desc: '₦5,000,000',
+    title: 'Revenue',
+    icon: HandWallet,
   },
 ];

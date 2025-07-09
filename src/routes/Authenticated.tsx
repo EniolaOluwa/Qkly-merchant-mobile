@@ -15,6 +15,10 @@ import ChangePassword from '@modules/Profile/screens/ChangePassword';
 import ChangePin from '@modules/Profile/screens/ChangePin';
 import NewPin from '@modules/Profile/screens/NewPin';
 import ConfirmNewPin from '@modules/Profile/screens/ConfirmNewPin';
+import InsightScreen from '@modules/Profile/screens/InsightScreen';
+import StoreCustomization from '@modules/Profile/screens/StoreCustomization';
+import ProfileDetails from '@modules/Profile/screens/ProfileDetails';
+import BusinessDetails from '@modules/Profile/screens/BusinessDetails';
 const {Screen, Navigator} = createNativeStackNavigator<
   AuthenticatedStackParamList,
   'Authenticated_Stack'
@@ -36,6 +40,10 @@ const Authenticated = () => {
       <Screen name="ChangePin" component={ChangePin} />
       <Screen name="NewPin" component={NewPin} />
       <Screen name="ConfirmNewPin" component={ConfirmNewPin} />
+      <Screen name="InsightScreen" component={InsightScreen} />
+      <Screen name="StoreCustomization" component={StoreCustomization} />
+      <Screen name="ProfileDetails" component={ProfileDetails} />
+      <Screen name="BusinessDetails" component={BusinessDetails} />
     </Navigator>
   );
 };

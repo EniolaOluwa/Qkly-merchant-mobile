@@ -28,18 +28,28 @@ const MainProfile = () => {
         <Spacer height={40} />
         <TitleSubHeader title="Business Profile" />
         <View style={{padding: horizontalSpacer}}>
-          <ProfileNavItem title="Business Details" icon={IdCardIcon} />
-          <ProfileNavItem title="Insight" icon={InsightIcon} />
+          <ProfileNavItem
+            title="Business Details"
+            icon={IdCardIcon}
+            navigation="BusinessDetails"
+          />
+          <ProfileNavItem
+            title="Insight"
+            icon={InsightIcon}
+            navigation="InsightScreen"
+          />
           <ProfileNavItem
             title="Store Customization"
             icon={() => ShopOutlineIcon({color: colors.black, size: '20'})}
             noBorder
+            navigation="StoreCustomization"
           />
         </View>
         <TitleSubHeader title="Personal Profile" />
         <View style={{padding: horizontalSpacer}}>
           <ProfileNavItem
             title="Profile Details"
+            navigation="ProfileDetails"
             icon={() => ProfileOutlineIcon({color: colors.black, size: '20'})}
           />
           <ProfileNavItem title="Invite Friends" icon={InviteIcon} noBorder />

@@ -1,4 +1,4 @@
-import {FlatList, Pressable, StyleSheet} from 'react-native';
+import {FlatList, Pressable, ScrollView, StyleSheet} from 'react-native';
 import React from 'react';
 import Container from '@components/Container';
 import AppTabHeader from '@components/Header/AppTabHeader';
@@ -14,6 +14,7 @@ const MainGrowth = () => {
   return (
     <Container.Normal>
       <AppTabHeader title="Growth" desc="Manage your Business in one place" />
+
       <FlatList
         data={GrowthData}
         renderItem={({item, index}) => (

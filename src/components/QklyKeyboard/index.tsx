@@ -62,6 +62,7 @@ const QklyKeyboard = memo(
           numColumns={3}
           nestedScrollEnabled
           keyExtractor={(_, index) => index.toString()}
+          scrollEnabled={false}
           renderItem={({item}) => {
             return (
               <TouchableOpacity

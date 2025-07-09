@@ -42,6 +42,10 @@ declare module 'navigation-route-type' {
     ChangePin: undefined;
     NewPin: {oldPin: string};
     ConfirmNewPin: {oldPin: string; newPin: string};
+    InsightScreen: undefined;
+    StoreCustomization: undefined;
+    ProfileDetails: undefined;
+    BusinessDetails: undefined;
   };
   export type AuthenticatedNavigationProps =
     NavigationProp<AuthenticatedStackParamList>;

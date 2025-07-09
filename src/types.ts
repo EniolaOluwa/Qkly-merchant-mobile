@@ -23,4 +23,9 @@ declare module 'App-Data-Types' {
     icon: () => React.JSX.Element;
     navigation: keyof AuthenticatedStackParamList;
   }
+  export interface IInsightDataType {
+    title: string;
+    desc: string;
+    icon: () => React.JSX.Element;
+  }
 }
